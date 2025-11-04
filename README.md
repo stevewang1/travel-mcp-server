@@ -2,6 +2,16 @@
 
 A comprehensive Model Context Protocol (MCP) server for travel aggregation, providing AI assistants with access to flight search, hotel booking, airport information, and real-time flight tracking.
 
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![MCP](https://img.shields.io/badge/MCP-1.20.0-green.svg)](https://modelcontextprotocol.io/)
+
+## Quick Links
+
+- [Quick Start Guide](QUICKSTART.md) - Get started in 5 minutes
+- [API Documentation](#available-tools) - See all available tools
+- [Troubleshooting](#troubleshooting) - Common issues and solutions
+
 ## Features
 
 ### Flight Search & Booking
