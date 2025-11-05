@@ -1,17 +1,21 @@
 """AviationStack API client for real-time flight tracking."""
 
 import os
+from pathlib import Path
 from typing import Any, Dict, Optional
 import requests
 from dotenv import load_dotenv
 
-load_dotenv()
+# Always load .env from project root regardless of current working directory
+_ROOT_DIR = Path(__file__).resolve().parents[2]
+_DOTENV_PATH = _ROOT_DIR / ".env"
+load_dotenv(dotenv_path=_DOTENV_PATH, override=False)
 
 
 class AviationStackClient:
     """Client for interacting with AviationStack API for flight tracking."""
 
-    BASE_URL = "http://api.aviationstack.com/v1"
+    BASE_URL = "https://api.aviationstack.com/v1"
 
     def __init__(self) -> None:
         """Initialize the AviationStack client with API key from environment."""

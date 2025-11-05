@@ -1,11 +1,15 @@
 """Amadeus API client wrapper for flight and hotel search."""
 
 import os
+from pathlib import Path
 from typing import Any, Dict, List, Optional
 from amadeus import Client, ResponseError
 from dotenv import load_dotenv
 
-load_dotenv()
+# Always load .env from project root regardless of current working directory
+_ROOT_DIR = Path(__file__).resolve().parents[2]
+_DOTENV_PATH = _ROOT_DIR / ".env"
+load_dotenv(dotenv_path=_DOTENV_PATH, override=False)
 
 
 class AmadeusClient:
